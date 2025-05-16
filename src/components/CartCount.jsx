@@ -1,7 +1,8 @@
 import React from "react";
 
-function CartCount() {
-  return <div>CartCount</div>;
+function CartCount(props) {
+  const { itemCount } = props;
+  return <div>CartCount : {itemCount}</div>;
 }
 
 export default CartCount;
