@@ -1,8 +1,16 @@
+import React from "react";
+import Header from "./components/Header";
+import ProductList from "./components/ProductLists";
+import CartSummary from "./components/CartSummery";
+
 function App() {
   return (
-    <div className="app">
-      <h1 className="text-2xl">App</h1>
-      <button className="btn btn-primary">Okie</button>
+    <div className="h-screen flex flex-col">
+      <Header />
+      <div className="flex flex-1">
+        <ProductList />
+        <CartSummary />
+      </div>
     </div>
   );
 }
