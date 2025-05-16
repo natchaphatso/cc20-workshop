@@ -1,9 +1,13 @@
 import React from "react";
 
-function CartItem() {
+function CartItem(props) {
+  const {
+    item: { id, title, price, quantity },
+  } = props;
+
   return (
-    <div className="flex justify-between px-4">
-      <p>Shoes</p>
+    <div className="flex justify-around items-center px-1">
+      <p>{title.split(" ")[0] + title.split(" ")[1]}</p>
       <div className="flex items-center gap-4">
         <p className="border w-5 h-5 bg-emerald-100 flex justify-center items-center cursor-pointer">
           -
@@ -12,7 +16,9 @@ function CartItem() {
           +
         </p>
       </div>
-      <p>1 * $1000</p>
+      <p>
+        {quantity} * ${price}
+      </p>
     </div>
   );
 }

@@ -18,7 +18,7 @@ function App() {
     fetchProducts();
   }, []);
 
-  const addToCart = (id, price, title) => {
+  const addToCart = (id, title, price) => {
     let newItem = { id: id, title: title, price: price, quantity: 1 };
     setCarts([...carts, newItem]);
   };
