@@ -52,6 +52,9 @@ function App() {
     }
     setCarts(clonedCart);
   };
+
+  // const allSumDigit = allSum.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header itemCount={carts.length} />

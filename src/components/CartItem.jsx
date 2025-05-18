@@ -11,21 +11,21 @@ function CartItem(props) {
     <div className="flex justify-between items-center px-4">
       <p>{title.split(" ")[0] + title.split(" ")[1]}</p>
       <div className="flex items-center gap-4">
-        <p
-          className="border w-5 h-5 bg-emerald-100 flex justify-center items-center cursor-pointer"
+        <button
+          className="rounded-xs w-6 h-6 bg-pink-300 flex justify-center items-center cursor-pointer hover:bg-pink-400 hover:text-white"
           onClick={() => decQuantity(id)}
         >
           -
-        </p>
-        <p
-          className="border w-5 h-5 bg-emerald-100 flex justify-center items-center cursor-pointer"
+        </button>
+        <button
+          className="rounded-xs w-6 h-6 bg-pink-300 flex justify-center items-center cursor-pointer hover:bg-pink-400 hover:text-white"
           onClick={() => incQuantity(id)}
         >
           +
-        </p>
+        </button>
       </div>
       <p>
-        {quantity} * ${price}
+        {quantity} x ${price}
       </p>
     </div>
   );
